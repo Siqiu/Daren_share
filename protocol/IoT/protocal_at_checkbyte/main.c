@@ -8,7 +8,7 @@
  */
 
 #include "protocal_at_checkbyte.h"
-#include <libc.h>
+#include <stdlib.h>
 
 /**
  * @Description:    函数用于判断字符串str2是否是str1的子串。
@@ -42,7 +42,7 @@ int main() {
 
     p1 = (uint8_t *) rt_strstr((const char *) TestString, "+") + 1;//attention + 号不是我们所需要的，所以这里地址加+1
 
-    printf("\ncheck string:+01GPINF,1.01,200000000000002,30000000000000000003,4,500005,1,7,8,114.05707,22.754436,210106153606, 12, 13,");
+    printf("\ncheck string:01GPINF,1.01,200000000000002,30000000000000000003,4,500005,1,7,8,114.05707,22.754436,210106153606, 12, 13,");
     check_byte = get_check_byte(p1);
 
     printf("\ncheck is %x\n", check_byte);

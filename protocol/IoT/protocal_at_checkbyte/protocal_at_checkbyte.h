@@ -10,7 +10,10 @@
 #ifndef DAREN_SHARE_PROTOCAL_AT_CHECKBYTE_H__
 #define DAREN_SHARE_PROTOCAL_AT_CHECKBYTE_H__
 
-#include <libc.h>
+#include <stdio.h>
+#include <string.h>
+typedef unsigned char uint8_t;
+typedef unsigned short int uint16_t;
 
 uint8_t at_protocol_check_byte(uint8_t *buf, uint16_t len);
 uint8_t get_check_byte(uint8_t *buf);
